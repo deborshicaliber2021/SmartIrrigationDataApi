@@ -31,6 +31,17 @@ namespace SmartIrrigationDataApi.Controllers
            return customerInfo;
         }
 
+        [HttpGet]
+        [Route("GetBioConfiguration")]
+        public BioConfiguration GetBioConfiguration()
+        {
+           BioConfiguration bioconfiguration =new BioConfiguration() {
+               PlantID = "TestPlantId",
+               OptimalWaterVolumn = 20
+           };
+           return bioconfiguration;
+        }
+
         [HttpPost]
         [Route("PostCustomerData")]
         public async Task<ActionResult<CustomerInfo>> PostCustomerData(CustomerInfo customerinfo)
