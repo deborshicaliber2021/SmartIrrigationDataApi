@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SmartIrrigationDataApi.Models;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Serialization;
 
 namespace SmartIrrigationDataApi
 {
@@ -27,6 +28,12 @@ namespace SmartIrrigationDataApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers()
+                    .AddJsonOptions(options =>
+                    {
+                        options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+                        options.JsonSerializerOptions.PropertyNamingPolicy = null;
+                    });  
             services.AddDbContext<CustomerDbContext>(opt =>opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<BioConfigurationDbContext>(opt =>opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
