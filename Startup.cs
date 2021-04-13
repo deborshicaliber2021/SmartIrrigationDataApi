@@ -28,6 +28,7 @@ namespace SmartIrrigationDataApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CustomerDbContext>(opt =>opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<BioConfigurationDbContext>(opt =>opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
         }
 

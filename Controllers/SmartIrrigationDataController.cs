@@ -12,13 +12,15 @@ namespace SmartIrrigationDataApi.Controllers
     [Route("api/[controller]")]
     public class SmartIrrigationDataController : ControllerBase
     {
-        
+
         private readonly CustomerDbContext _context;
+        private readonly BioConfigurationDbContext _bioContext;
         private readonly ILogger<SmartIrrigationDataController> _logger;
 
-        public SmartIrrigationDataController(ILogger<SmartIrrigationDataController> logger,CustomerDbContext context)
+        public SmartIrrigationDataController(ILogger<SmartIrrigationDataController> logger, CustomerDbContext context, BioConfigurationDbContext bioContext)
         {
             _context = context;
+            _bioContext = bioContext;
             _logger = logger;
         }
 
@@ -26,20 +28,17 @@ namespace SmartIrrigationDataApi.Controllers
         [Route("GetCustomerData")]
         public CustomerInfo GetCustomerData(string customerId)
         {
-           
-           CustomerInfo customerInfo=_context.CustomerInfoData.Find(customerId);
-           return customerInfo;
+
+            CustomerInfo customerInfo = _context.CustomerInfoData.Find(customerId);
+            return customerInfo;
         }
 
         [HttpGet]
         [Route("GetBioConfiguration")]
-        public BioConfiguration GetBioConfiguration()
+        public List<BioConfiguration> GetBioConfiguration(string customerId, string deviceId)
         {
-           BioConfiguration bioconfiguration =new BioConfiguration() {
-               PlantID = "TestPlantId",
-               OptimalWaterVolumn = 20
-           };
-           return bioconfiguration;
+            List<BioConfiguration> bioConfigData = _bioContext.BioConfigurations.Where(a => a.CustomerID == customerId && a.DeviceID == deviceId).ToList();
+            return bioConfigData;
         }
 
         [HttpPost]

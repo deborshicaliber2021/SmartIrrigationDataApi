@@ -1,8 +1,9 @@
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SmartIrrigationDataApi.Models
 {
-    [Table("TBL_CustomerRecords")]
+    [Table("TBL_Customers")]
     public class CustomerInfo
     {
         [System.ComponentModel.DataAnnotations.Key]
