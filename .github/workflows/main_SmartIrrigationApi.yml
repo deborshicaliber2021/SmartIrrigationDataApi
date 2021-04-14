@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'SmartIrrigationApi'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1b732c86f8494240abe0572a2ab08a0b }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b0b18850044c4604ba6296fe96af74a3 }}
         package: .
