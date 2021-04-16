@@ -126,3 +126,8 @@ D:\Hackathon\2021\BioDataApi\SmartIrrigationDataApi\obj\Debug\netcoreapp3.1\scop
 D:\Hackathon\2021\BioDataApi\SmartIrrigationDataApi\obj\Debug\netcoreapp3.1\SmartIrrigationDataApi.RazorTargetAssemblyInfo.cache
 D:\Hackathon\2021\BioDataApi\SmartIrrigationDataApi\obj\Debug\netcoreapp3.1\SmartIrrigationDataApi.csproj.CopyComplete
 D:\Hackathon\2021\BioDataApi\SmartIrrigationDataApi\obj\Debug\netcoreapp3.1\SmartIrrigationDataApi.genruntimeconfig.cache
+C:\Users\Public\SmartIrrigationDataApi\obj\Debug\netcoreapp3.1\SmartIrrigationDataApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Public\SmartIrrigationDataApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Public\SmartIrrigationDataApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Public\SmartIrrigationDataApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Public\SmartIrrigationDataApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

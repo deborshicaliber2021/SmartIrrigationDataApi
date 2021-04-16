@@ -34,6 +34,13 @@ namespace SmartIrrigationDataApi.Controllers
         }
 
         [HttpGet]
+        [Route("GetBioConfigurationData")]
+        public List<BioConfiguration> GetBioConfigurationData()
+        {
+            List<BioConfiguration> bioConfigData = _bioContext.BioConfigurations.ToList();
+            return bioConfigData;
+        }
+        [HttpGet]
         [Route("GetBioConfiguration")]
         public List<BioConfiguration> GetBioConfiguration(string customerId, string deviceId)
         {
@@ -48,6 +55,15 @@ namespace SmartIrrigationDataApi.Controllers
             _context.CustomerInfoData.Add(customerinfo);
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetCustomerData), new { id = customerinfo.CustomerID }, customerinfo);
+        }
+
+        [HttpPost]
+        [Route("PostBioConfigurationData")]
+        public async Task<ActionResult<BioConfiguration>> PostBioConfigurationData(BioConfiguration bioConfigData)
+        {
+            _bioContext.BioConfigurations.Add(bioConfigData);
+            await _bioContext.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetBioConfigurationData), bioConfigData);
         }
     }
 }

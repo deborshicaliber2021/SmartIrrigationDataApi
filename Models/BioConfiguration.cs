@@ -12,9 +12,8 @@ namespace SmartIrrigationDataApi.Models
         public string DeviceID { get; set; }
         public string PlantID { get; set; }
         public int WateringFrequencyInDays { get; set; }
-        public decimal OptimalWaterVolumnInLitres { get; set; }
-
         public DateTime CreatedDate{get;set;}
+        public decimal OptimalWaterVolumnInLitres { get; set; }
         
     }
             

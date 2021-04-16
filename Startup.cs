@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using SmartIrrigationDataApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace SmartIrrigationDataApi
 {
@@ -37,6 +38,7 @@ namespace SmartIrrigationDataApi
             services.AddDbContext<CustomerDbContext>(opt =>opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<BioConfigurationDbContext>(opt =>opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,6 +59,13 @@ namespace SmartIrrigationDataApi
             {
                 endpoints.MapControllers();
             });
-        }
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "SmartIrrigation V1");
+            });
+                    }
     }
 }

@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Hackathon\\2021\\BioDataApi\\SmartIrrigationDataApi\\SmartIrrigationDataApi.csproj": {}
+    "C:\\Users\\Public\\SmartIrrigationDataApi\\SmartIrrigationDataApi.csproj": {}
   },
   "projects": {
-    "D:\\Hackathon\\2021\\BioDataApi\\SmartIrrigationDataApi\\SmartIrrigationDataApi.csproj": {
+    "C:\\Users\\Public\\SmartIrrigationDataApi\\SmartIrrigationDataApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Hackathon\\2021\\BioDataApi\\SmartIrrigationDataApi\\SmartIrrigationDataApi.csproj",
+        "projectUniqueName": "C:\\Users\\Public\\SmartIrrigationDataApi\\SmartIrrigationDataApi.csproj",
         "projectName": "SmartIrrigationDataApi",
-        "projectPath": "D:\\Hackathon\\2021\\BioDataApi\\SmartIrrigationDataApi\\SmartIrrigationDataApi.csproj",
-        "packagesPath": "C:\\Users\\bidit\\.nuget\\packages\\",
-        "outputPath": "D:\\Hackathon\\2021\\BioDataApi\\SmartIrrigationDataApi\\obj\\",
+        "projectPath": "C:\\Users\\Public\\SmartIrrigationDataApi\\SmartIrrigationDataApi.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Public\\SmartIrrigationDataApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\bidit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -43,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -58,6 +51,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.2, )"
             }
           },
           "imports": [
@@ -78,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
