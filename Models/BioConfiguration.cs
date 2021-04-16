@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SmartIrrigationDataApi.Models
 {
-    [Table("TBL_BioConfigurations")]
+    [Table("TBL_BioConfigurations_App")]
     public class BioConfiguration
     {
         [System.ComponentModel.DataAnnotations.Key]
-        public Guid ID { get; set; }
+        public string ID { get; set; }
         public string CustomerID { get; set; }
         public string DeviceID { get; set; }
         public string PlantID { get; set; }
